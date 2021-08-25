@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Random Generator</title>
+
+	<style>
+		body {
+			background-color: pink;
+			text-align: center;
+		}
+
+		button {
+			background-color: #fc02c6;
+			color: white;
+			font-size: 29px;
+			padding: 20px;
+			border-radius: 45%;
+			box-shadow: 0 8px 25px 0 rgba(0,0,0,0.6);
+		}
+		
+		h3 {
+			font-size: 35px;
+			color: #8c3679;
+		}
+	</style>
+
+	<script>
+
+		function randomNumber() {
+  			var x = Math.floor((Math.random() * 10) + 1);
+  			document.getElementById("rand").innerHTML = x;
+		}
+
+	</script>
+
+</head>
+<body>
+
+	<h1>WDV 221: Intro to Javacript</h1>
+
+	<h2>Random Generator</h2>
+
+	<button onClick="randomNumber()">Click Me</button>
+
+	<h3 id="rand"></h3>
+
+</body>
+</html>

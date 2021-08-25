@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Products Example</title>
+    
+    <script>
+    
+        let products = ["stapler", "pens" , "paperclip"];
+
+        let inventory = ["0", "0", "0"];
+
+        //console.log(products.length);
+
+        //console.log("Products are: " + products);
+
+        function lookupArray(toLookUp) {
+
+            var productLocation = products.indexOf(toLookUp);
+
+            //look for a match in the products array for what was entered on the form
+
+            //return true if match found false if match not found
+
+            if(productLocation == -1) {
+                return false;
+            }
+            else {
+                return true;
+            }
+
+
+        }
+
+        function lookupProductIndex(toLookUp) {
+            //lookup index of product in products array
+
+            //return the index of located product or -1 if no match
+
+            return products.indexOf(toLookUp);
+        }
+
+        function processInventoryChange() {
+            //get the input.value from the form and store it as product to find
+
+            let productInput = document.getElementById("inProduct").value;
+
+            //call lookupProductIndex to find a match
+
+            let productIndex = lookupProductIndex(productInput);
+
+            //if -1 is returned, put message on screen/ error etc...End the function
+
+            if(productIndex == -1) {
+               alert("Error, please enter a different product"); //display error message
+                return; //end function
+            }            
+            
+            //using the row number of the product, get the matching row from Inventory array
+
+           inventory[productIndex] = inventory[productIndex] + parseInt(document.getElementById("inventoryChange").value);
+
+           ///inventory[productIndex] += parseInt(document.getElementById("inventoryChange").value);
+
+
+            //add or subtract inventory from inventory[row]
+
+            
+
+            //display updated inventory list/ process complete
+
+            document.getElementById("productResult").innerHTML = productInput + " " + inventory[productIndex];
+        }
+    
+    </script>
+  
+</head>
+<body>
+
+    <h1>WDV 221: Intro Javascript</h1>
+
+    <h2>Products Assignment</h2>
+
+    <form name="form1" action="">
+
+        <p>
+            <label> Please enter a product:
+                <input type="text" name="inputProduct" id="inProduct">
+            </label>
+        </p>
+
+        <label> Please enter an inventory change:
+            <input type="text" name="inputProduct" id="inventoryChange">
+        </label>
+
+        <p>
+            <input type="button" value="Find Product" onclick="processInventoryChange(); return false;">
+        </p>
+
+        <p>
+            Inventory Update: <span id="productResult"></span>
+
+        </p>
+
+    </form>
+
+</body>
+</html>

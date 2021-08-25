@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WDV221 Intro Javascript - Loops</title>
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h2>Project-5 Loops Assignment</h2>
+<hr />
+<p>Please complete the following exercises on this page. When complete post this page to your  server. Make a link in your WDV221 homework  page for this assignment. </p>
+<p>Include a comment in each script with the exercise number and a description of what the script is supposed to do.</p>
+<p>Using Blackboard submit this  Assignment.</p>
+<hr />
+<h3>Instructions: </h3>
+<p>Please complete the following exercises using Javascript loops as indicated.  Please place your code on this page. Use runtime scripts unless told otherwise. </p>
+<p>1. Create a WHILE loop that will print out the  numbers 0 to 4 each on a seperate line.</p>
+<p>2. Create a FOR loop that will print out the  numbers 4 to 0 each on a seperate line.</p>
+<p>3. Create a loop that will print 1 to 5 each in its own paragraph element.</p>
+<p>4. Create a loop that will print out the following numbers (5,10,15,20,25...) until one is greater than 40.</p>
+<p>5. Create a loop that will print out  6 of the following messages (Option 1, Option 2, Option 3, etc. ) as options within the drop down menu below.</p>
+
+<script>
+  //Exercise 1
+
+  var countUp = 0; //Created countUp variable
+  while(countUp < 5) { // Made the condition so that when countUp gets to 5, the condition would stop
+    document.write("<p>" + countUp + "</p>"); // Prints the countUp value on separate lines
+    countUp++; // countUp moves up one number (0 to 1, 1 to 2, etc)
+  }
+
+  document.write("-------------------------------------------------"); //Separator
+
+  //Exercise 2
+
+  var countDown = 4; // Created countDown variable
+  while(countDown > -1) { // Because countDown starts at four, the new condition must stop once 4 reaches 0
+    document.write("<p>" + countDown + "</p>"); //prints countDown value
+    countDown--; // decrements countDown(4 to 3, 3 to 2, etc)
+  }
+
+  document.write("-------------------------------------------------"); //Separator
+
+  //Exercise 3
+  for(var x = 1; x<6; x++) { //Starting at one, every iteration will print until the value reaches 5 and them stops
+    document.write("<p>" + x + "</p>"); // Prints values on separate line
+  }
+
+  document.write("-------------------------------------------------"); //Separator
+
+  //Exercise 4
+  for(var y=1; y<9; y++) { // starting at 1, each iteration will multiply itself by 5 untill it reaches 40
+    var result = y * 5; // Iterations multiply by one
+    document.write("<p>" + result + "</p>"); // Prints values one separate lines
+  }
+
+  document.write("-------------------------------------------------"); //Separator
+
+
+</script>
+
+<p>
+  <label>Select an Option! 
+    <select name="select" id="select">
+        <script>
+            //Exercise 5
+
+            for(let i = 1; i <= 6; i++){ //Starting iteration at 1 incrementing until 6
+                document.write("<option>" + "Option " + i + "</option>"); //display number            
+            }
+
+        </script>
+    </select>
+  </label>
+</p>
+
+
+<p>&nbsp;</p>
+</body>
+</html>

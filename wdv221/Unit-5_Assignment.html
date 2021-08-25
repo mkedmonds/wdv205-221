@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function displayClick() {
+			alert("You pressed the Click Me button");
+		}
+
+		function pageLoad() { //will load after page loads
+			//document.getElementById("clickMe").onclick = displayClick;
+
+			document.getElementById("clickMe").addEventListener("click", displayClick);
+		}
+
+		function passBy() {
+			alert("You moused over");
+		}
+		
+	</script>
+</head>
+<body onload="pageLoad()">
+
+	<h1>WDV221: Intro to Javascript</h1>
+
+	<h2>Unit 5: Event Handlers</h2>
+
+	<button id="clickMe">onClick</button>
+
+	<p><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="beach.jpg" width="55" height="32"> onMouseOver/Out</p>
+ 
+	<script>
+		function bigImg(x) {
+  			x.style.height = "64px";
+  			x.style.width = "64px";
+		}
+
+		function normalImg(x) {
+  			x.style.height = "32px";
+  			x.style.width = "55px";
+		}
+	</script>
+
+
+	<p>onChange: Select your favorite food</p>
+
+	<select id="mySelect" onchange="myFunction()">
+  		<option value="Pizza">Pizza
+  		<option value="Pasta">Pasta
+  		<option value="Salad">Salad
+  		<option value="Other">Other
+	</select>
+
+	<p id="food"></p>
+
+	<script>
+		function myFunction() {
+  			var x = document.getElementById("mySelect").value;
+  			document.getElementById("food").innerHTML = "You selected: " + x;
+		}
+	</script>
+
+</body>
+</html>

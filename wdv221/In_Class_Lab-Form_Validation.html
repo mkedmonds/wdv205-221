@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>WDV221 Intro Javascript - In Class Lab Form Validation</title>
+  
+  <script>
+
+    //THIS ENTIRE COMMENTED OUT CODE WAS MY FIRST ATTEMPT AT THE SKILL TEST
+  
+    // function validateName() {
+    //   //alert("inside validateName"); // test if function works
+
+    //   let inName = document.getElementById("textfieldName").value;// take in the value input
+
+    //   if(inName == "") { //If there isnt anything in the Customer Name....
+    //     alert("Please enter in your name");// .. The form will ask for a name
+    //   }
+    //   else {
+    //     if(isNaN(inName)){ //will make sure value input is not a number
+    //       alert(inName);
+    //     }
+    //     else {
+    //       alert("Please enter in your name"); //if the vlue inputted is a number it will ask for a name
+    //     }
+    //   }
+    // }
+
+
+    // function validateItemPrice() {
+    //     //alert("inside validate Item Price")// test if function works
+
+    //     let inNumberPrice = document.getElementById("textfield").value;
+
+    //     if(isNaN(inNumberPrice) || inNumberPrice == ""){
+    //       alert("Please enter a number");
+    //     }
+    //     else {
+    //       //alert(inNumberPrice); //displayed number input
+    //       if(parseFloat(inNumberPrice) < 0){
+    //         alert("Number invalid. Please enter a number higher than zero");
+    //       }
+    //       else {
+    //         alert(parseFloat(inNumberPrice));
+    //       }
+    //     }
+    // }
+
+
+
+    // function validateNumberPurchased() {
+    //   //alert("inside validateNumberPurchased"); //test to see if function works
+
+    //   var inNumberPurchased = document.getElementById("textfield2").value;
+
+    //   //alert(parseInt(inNumberPurchased)); //testing parseint, number should be a whole number
+
+    //   if(isNaN(inNumberPurchased) || inNumberPurchased == ""){
+    //       alert("Please enter a number");
+    //   }
+    //   else {
+    //     if(parseInt(inNumberPurchased) < 0){
+    //       alert("Number invalid. Please enter a number higher than zero");
+    //     }
+    //     else{
+    //       alert(parseInt(inNumberPurchased));
+    //     }
+    //   }
+
+    // }
+
+    // function submitValidForm() {
+    //   if(validateName() && validateItemPrice() && validateNumberPurchased()) {
+    //     alert("INVALID");
+    //   }
+    //   else {
+    //     alert("VALID");
+    //   }
+    // }
+
+    //THIS WAS MY SECOND ATTEMPT TO THE SKILL TEST
+
+    //code example:https://www.tutorialspoint.com/javascript/javascript_form_validations.htm
+
+
+
+    function validate() {
+          
+      if( document.form1.textfieldName.value == "" ) {
+         document.getElementById("invalidName").innerHTML = "Please provide your name!"; //if customer name is not provided, will turn yellow and state error
+         document.form1.textfieldName.style.backgroundColor = "yellow";
+      }
+
+      if( document.form1.textfield.value == "" || isNaN( document.form1.textfield.value ) ||
+         document.form1.textfield.value < 0 ) {
+         
+        document.getElementById("invalidNumber").innerHTML ="Please provide a number!" //if number is not provided, will turn yellow and state error
+         document.form1.textfield.style.backgroundColor = "yellow";
+      }
+
+      if( document.form1.textfield2.value == "" || isNaN( document.form1.textfield2.value ) ||
+         document.form1.textfield2.value < 0  || document.form1.textfield2.value.includes(".")) {
+
+         document.getElementById("invalidPurchase").innerHTML = "Please provide a WHOLE number!"; //if number is not provided or is a decimal, will turn yellow and state error
+         document.form1.textfield2.style.backgroundColor = "yellow";
+         
+      }
+
+      //Confirms valid forme
+      else{
+        document.getElementById("result").innerHTML = "FORM VALID";
+        document.getElementById("result2").innerHTML = "FORM VALID";
+        return( true );
+      }
+      
+   }
+
+   function resetTheForm() {
+
+     //Removes invalid statements
+    document.getElementById("invalidName").innerHTML = "";
+    document.getElementById("invalidNumber").innerHTML =""; 
+    document.getElementById("invalidPurchase").innerHTML = "";
+
+    //Removes highlighted background
+    document.form1.textfieldName.style.backgroundColor = "";
+    document.form1.textfield.style.backgroundColor = "";
+    document.form1.textfield2.style.backgroundColor = "";
+    
+    //Removes valid statements
+    document.getElementById("result").innerHTML = "";
+    document.getElementById("result2").innerHTML = "";
+
+   }
+
+  </script>
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h2>In Class Lab  - Form Validation</h2>
+<form id="form1" name="form1" method="post" action="" onsubmit="validate();return false;">
+  <table>
+     <tr>
+      <td>Customer Name:</td>
+      <td><input type="text" name="textfieldName" id="textfieldName" /></td> 
+      <td id="invalidName"></td>
+    </tr> 
+    <tr>
+      <td>Item Price:</td>
+      <td><input type="text" name="textfield" id="textfield" /></td>
+      <td id="invalidNumber"></td>
+    </tr>
+    <tr>
+      <td>Number Purchased:</td>
+      <td><input type="text" name="textfield2" id="textfield2" /></td>
+      <td id="invalidPurchase"></td>
+    </tr>
+    <tr>
+      <td>Sale Price:</td>
+      <td id="result"></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+
+    <tr>
+      <td>Total Sales: </td>
+      <td  id="result2"></td>
+      <td><p> </p></td>
+    </tr>
+  </table>
+  <p>
+    <input type="submit" name="button" id="button" value="Submit Order"  />
+    <input type="reset" name="button2" id="button2" value="Reset" onclick="resetTheForm()"/>
+    <input type="button" name="button3" id="button3" value="Clear Order" onclick="resetTheForm()"/>
+  </p>
+</form>
+<h3>Instructions: Modify this page so that the form works as described.</h3>
+<ul>
+  <li>The Customer Name is required. </li>
+  <li>The Item Price field should do the following
+    <ul>
+      <li> should be a number</li>
+      <li>should allow decimal values</li>
+      <li>cannot be less that zero</li>
+      <li> display and highlight the error messages on the page </li>
+    </ul>
+  </li>
+  <li>The Number Purchased field should do the following:
+    <ul>
+      <li>be a number</li>
+      <li>should only allow whole numbers/integers</li>
+      <li>cannot be zero or less</li>
+      <li>display and highlight the error messages on the page</li>
+    </ul>
+  </li>
+  <li>The Reset button should clear the form fields, Sale Price area, Total Sales area, all error messages.</li>
+  <li>The Clear Order button should do the same as the Reset button.</li>
+  <li>The Submit order button should validate the fields and if all fields are valid display &quot;Valid Form&quot; in the Sales Price area and Total Sales area.</li>
+</ul>
+<p>&nbsp;</p>
+</body>
+</html>
