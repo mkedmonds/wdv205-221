@@ -1,0 +1,17 @@
+@import'gridhead';
+@import'gridnav';
+@import'gridsect';
+@import'gridfoot';
+
+.grid-container {
+    width: 960px;
+  display: grid;
+  background-color: #1E90FF;
+  grid-template-columns: 50% 50%;
+}
+
+
+img{
+	padding-right: 5px;
+}
+

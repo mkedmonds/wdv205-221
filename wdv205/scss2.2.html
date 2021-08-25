@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+
+<body>
+
+<p>@charset "utf-8"; <br>
+/* CSS Document */  <br>
+
+$primaryColor: black;  <br>
+
+$secondaryColor: blue;  <br>
+
+</p>
+
+
+<p>@import 'gradientMixin';	/* looks for a file call gradient.scss */  <br>
+
+
+.applyGradient { @include verticalGradient($primaryColor, $secondaryColor) }  <br>
+
+</p>
+
+
+<p>.scssDisplay	{  <br>
+	color:white;  <br>
+	font-size:24px;	 <br>
+}  <br>
+
+</p>
+
+<p> 
+    #rcorners2 { <br>
+    border-radius: 25px;<br>
+    border: 2px solid #73AD21; <br>
+    padding: 20px;  <br>
+    width: 200px; <br>
+    height: 150px;   <br> 
+}
+
+</p>
+
+<p>#p1 { <br>
+   background-color:rgba(255,0,0,0.3); <br>
+}
+</p>
+
+</body>
+</html>

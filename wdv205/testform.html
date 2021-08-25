@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+form {
+    box-sizing: border-box;
+}
+
+input[type=text], textarea {
+    width: 80%;
+    vertical-align: top;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    line-height: 3em;
+    resize: none;
+}
+
+label {
+    width: 140px;
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+     text-align: right;
+     line-height: 2em;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <form>
+       <p><label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.."></p>
+        <p><label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.."></p>
+        <p><label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea></p>
+     
+      <input type="submit" value="Submit">
+
+  </form>
+</div>
+
+</body>
+</html>

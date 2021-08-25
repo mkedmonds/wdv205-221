@@ -1,0 +1,40 @@
+.a {
+  margin: 50px;
+  width: 250px;
+  height: 180px;
+  box-sizing: border-box;
+  padding-left: 80px;
+  padding-top: 80px;
+  background-color: yellow; }
+
+.a:hover {
+  -ms-transform: rotate(160deg);
+  -webkit-transform: rotate(160deg); }
+
+.b {
+  margin: 50px;
+  width: 250px;
+  height: 180px;
+  box-sizing: border-box;
+  padding-left: 80px;
+  padding-top: 80px;
+  background-color: lightblue; }
+
+.b:hover {
+  -ms-transform: skewX(50deg);
+  -webkit-transform: skewX(50deg); }
+
+.c {
+  margin: 100px;
+  width: 250px;
+  height: 180px;
+  box-sizing: border-box;
+  padding-left: 80px;
+  padding-top: 80px;
+  background-color: pink; }
+
+.c:hover {
+  -ms-transform: scale(2, 1);
+  -webkit-transform: scale(2, 1); }
+
+/*# sourceMappingURL=trans2dmain.css.map */

@@ -1,0 +1,40 @@
+.a {
+  margin: 50px;
+  width: 250px;
+  height: 180px;
+  box-sizing: border-box;
+  padding-left: 80px;
+  padding-top: 80px;
+  background-color: yellow; }
+
+.a:hover {
+  -ms-transform: rotateX(130deg);
+  -webkit-transform: rotateX(130deg); }
+
+.b {
+  margin: 50px;
+  width: 250px;
+  height: 180px;
+  box-sizing: border-box;
+  padding-left: 80px;
+  padding-top: 80px;
+  background-color: lightblue; }
+
+.b:hover {
+  -ms-transform: rotateY(150deg);
+  -webkit-transform: rotateY(150deg); }
+
+.c {
+  margin: 100px;
+  width: 250px;
+  height: 180px;
+  box-sizing: border-box;
+  padding-left: 80px;
+  padding-top: 80px;
+  background-color: pink; }
+
+.c:hover {
+  -ms-transform: rotateZ(180deg);
+  -webkit-transform: rotateZ(180deg); }
+
+/*# sourceMappingURL=trans3dmain.css.map */

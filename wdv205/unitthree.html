@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <style>
+      div + p {
+	background-color: pink;
+}
+      div > p {
+	background-color: #00FFFF;
+}
+      p ~ ul {
+	background-color: #9400D3;
+}
+      h3 {
+        display: none;
+        background-color: yellow;
+        padding: 20px;
+}
+
+     div:hover h3 {
+         display: block;
+}
+     p i:first-child {
+          color: blue;
+}
+     [title~= bubble] {
+	border: 8px solid red;
+}
+     a[target= _disney] {
+	border: 5px solid yellow;
+}
+   </style>
+
+</head>
+<body>
+
+	<p>div > p</p>
+	<div>
+
+	  <p> BLUE</p>
+
+	</div>
+
+	<p></p>
+
+	<p>div + p</p>
+
+	<div></div>
+
+	<p> + =PINK</p>
+	
+
+	<p>This List Will Be Purple(p~ul)</p>
+
+	<ul>
+	  <li>Purple</li>
+	  <li>Purple</li>
+	  <li>Purple</li>
+	</ul>
+
+	<div>HOVER
+	  <h3>hi there :)</h3>
+	</div>
+	
+        <p></p>
+
+        <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+        <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+
+	<p></p>
+	<p>Pics with the title "bubble" gets a red border</p>
+	
+	<img src="kid-1241817_640.jpg" title="bubble" width="100" height="100">
+	<img src="flower-3140492_640.jpg" title="flower" width="100" height="100">
+	<img src="soap-bubbles-1451092_640.jpg" title="bubble" width="100" height="100">
+
+	<p>Links with target "_disney" will gt a yellow border</p>
+	
+	<a href="https://www.disney.com" target="_disney">Disney</a>	
+	<a href="https://www.w3schools.com" target="_dosney">Not Disney</a>
+	<a href="https://www.kingdomhearts.com/home/us/" target="_disny">Kinda Disney</a>
+
+</body>
+</html>

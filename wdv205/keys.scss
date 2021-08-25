@@ -1,0 +1,18 @@
+@keyframes ad {
+	0% {
+		top: -1000px; 
+		left: 5%;
+	}
+	100% {
+		top: 10px;
+		left: 10%;
+	}
+}
+@keyframes fact {
+	100% {
+		
+		 transform: rotate(360deg);
+	
+	}
+}
+

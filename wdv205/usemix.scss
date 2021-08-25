@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+$font-family-1: 'Poor Story', cursive;
+
+$radius: 10px;
+
+/* In type partial */
+@font-face {
+  font-family: 'Poor Story';
+  src: url('https://fonts.googleapis.com/css?family=Poor+Story');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+  -moz-box-shadow:    $top $left $blur $color #{$inset};
+  box-shadow:         $top $left $blur $color #{$inset};
+}
+
+
+.box { 
+  @include border-radius(50px); // apply the mixin
+  @include box-shadow(5px,5px, 5px, #000000);
+  background-color:olive;
+  color:white;
+  padding:10px;
+}
+
+h1{
+   font-family: $font-family-1;
+}

@@ -1,0 +1,30 @@
+/* CSS Document */
+/* CSS Document */
+/* looks for a file call gradient.scss */
+.applyGradient {
+  background: #FF1493;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#FF1493, #00BFFF);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#FF1493, #00BFFF);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#FF1493, #00BFFF);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#FF1493, #00BFFF);
+  /* Standard syntax (must be last) */ }
+
+.scssDisplay {
+  color: white;
+  font-size: 24px; }
+
+#rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 150px; }
+
+#p1 {
+  background-color: rgba(255, 0, 0, 0.3); }
+
+/*# sourceMappingURL=sample.css.map */

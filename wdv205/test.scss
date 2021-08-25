@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+$primaryColor: #8B008B;
+$secondaryColor: #00CED1;
+
+
+body{
+	background: $primaryColor;
+}
+
+.para	{
+	color:white;
+	font-size:24px;	
+}
+.button {
+	background-color: $secondaryColor; /* Green */
+	border-radius:50%;
+	border: 5px solid pink;
+ 	color: white;
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;	
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}

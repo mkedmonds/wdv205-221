@@ -1,0 +1,23 @@
+/* CSS Document */
+/* In type partial */
+@font-face {
+  font-family: 'Poor Story';
+  src: url("https://fonts.googleapis.com/css?family=Poor+Story");
+  font-weight: normal;
+  font-style: normal; }
+.box {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-box-shadow: 5px 5px 5px #000000 ;
+  -moz-box-shadow: 5px 5px 5px #000000 ;
+  box-shadow: 5px 5px 5px #000000 ;
+  background-color: olive;
+  color: white;
+  padding: 10px; }
+
+h1 {
+  font-family: "Poor Story", cursive; }
+
+/*# sourceMappingURL=usemix.css.map */

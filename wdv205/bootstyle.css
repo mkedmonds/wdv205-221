@@ -1,0 +1,41 @@
+.container {
+  background-color: lightblue; }
+
+.head {
+  background-color: #00CED1; }
+
+.menu {
+  background-color: #9400D3; }
+
+.section {
+  background-color: #1E90FF; }
+
+.text {
+  text-align: center; }
+
+.col {
+  column-count: 2; }
+
+fieldset {
+  border: thin solid black; }
+
+form {
+  background-color: white; }
+
+.button {
+  background-color: black;
+  color: white;
+  border-radius: 45%; }
+
+.foot {
+  background-color: #00CED1; }
+
+@media screen and (max-width: 576px) {
+  .contain {
+    display: block;
+    width: 100%; }
+
+  h1, h2, h3 {
+    text-align: center; } }
+
+/*# sourceMappingURL=bootstyle.css.map */

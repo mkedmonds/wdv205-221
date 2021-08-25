@@ -1,0 +1,95 @@
+@-webkit-keyframes ad {
+	0% {
+		transform: translate(-1000%, 0); 
+	}
+	100% {
+		transform: translate(0%, 0);
+	}
+}
+@-webkit-keyframes fact {
+	100% {
+		
+		 transform: rotate(360deg);
+	
+	}
+}
+
+@keyframes ad {
+	0% {
+		transform: translate(-1000%, 0); 
+	}
+	100% {
+		transform: translate(0%, 0);
+	}
+}
+@keyframes fact {
+	100% {
+		
+		 transform: rotate(360deg);
+	
+	}
+}
+
+.box1 {
+	width: 20%;
+	height: 62%;
+	position: absolute;
+	top: 150px;
+	left: 15px;
+	box-sizing: border-box;
+	border: 2px solid blue;
+	-webkit-animation-name: ad;
+	-webkit-animation-duration: 2s;
+	animation-name: ad;
+	animation-duration: 2s;
+}
+
+.box2 {
+	width: 20%;
+	position: absolute;
+	bottom: 22%;
+	left: 15px;
+	background-color: blue;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	-webkit-animation-name: ad;
+	-webkit-animation-duration: 2s;
+	animation-name: ad;
+	animation-duration: 2s;
+}
+
+.box2:hover {
+	background-color: lightblue;
+	color: blue;
+}
+
+.box3 {
+	width: 20%;
+	height: 35%;
+	position: absolute;
+	bottom: 250px;
+	left: 15px;
+	background-color: rgba(255,255,255, 0.5);
+	align: middle;
+}
+
+.fun1 {
+	color: black;
+	font-size: 29px;
+	text-align: center;
+	font-weight: bold;
+	-webkit-animation: ad;
+	-webkit-animation-duration: 4s;
+	animation: ad;
+	animation-duration: 4s;	
+} 
+
+.fun2 {
+	-webkit-animation: fact;
+	-webkit-animation-duration: 4s;	
+	-webkit-animation-delay: 2s;
+	animation: fact;
+	animation-duration: 4s;	
+	animation-delay: 2s;
+} 

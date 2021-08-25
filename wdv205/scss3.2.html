@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WDV205 Advanced CSS</title>
+
+<link href="usemix.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<h1>SCSS Code</h1>
+
+<p>
+@charset "utf-8"; <br>
+/* CSS Document */ <br>
+ <br>
+$font-family-1: 'Poor Story', cursive; <br>
+ <br>
+$radius: 10px; <br>
+ <br>
+/* In type partial */ <br>
+@font-face { <br>
+  font-family: 'Poor Story'; <br>
+  src: url('https://fonts.googleapis.com/css?family=Poor+Story'); <br>
+  font-weight: normal; <br>
+  font-style: normal; <br>
+} <br>
+ <br>
+@mixin border-radius($radius) { <br>
+  -webkit-border-radius: $radius; <br>
+     -moz-border-radius: $radius; <br>
+      -ms-border-radius: $radius; <br>
+          border-radius: $radius; <br>
+} <br>
+ <br>
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") { <br>
+  -webkit-box-shadow: $top $left $blur $color #{$inset}; <br>
+  -moz-box-shadow:    $top $left $blur $color #{$inset}; <br>
+  box-shadow:         $top $left $blur $color #{$inset}; <br>
+} <br>
+ <br>
+
+.box {  <br>
+  @include border-radius(5px); // apply the mixin <br>
+  @include box-shadow(5px,5px, 5px, #000000); <br>
+  background-color:olive; <br>
+  color:white; <br>
+  padding:10px; <br>
+} <br>
+
+</p> <br>
+
+
+
+
+</body>
+</html>
